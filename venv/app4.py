@@ -87,9 +87,9 @@ if(prompt1):
     print("Response time :",time.process_time()-start)
     response=retrieval_chain.invoke({'input':prompt1})['answer']
 
-    if ("The provided text does not contain any information" in response):
-        print("Fallback to general model.")
-        response = model.generate_content(prompt1).text
+    # if ("The provided text does not contain any information" in response):
+    #     print("Fallback to general model.")
+    #     response = model.generate_content(prompt1).text
     chat_actions()
 
 
