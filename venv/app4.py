@@ -51,8 +51,8 @@ def load_documents(filepath):
 
 # def vector_embedding():
 if "vectors" not in st.session_state:
-    st.session_state.vectors = load_faiss_index('faiss_index')
-    st.session_state.documents = load_documents('documents.pkl')
+    st.session_state.vectors = load_faiss_index('venv/faiss_index')
+    st.session_state.documents = load_documents('venv/documents.pkl')
 # prompt1=st.text_input("Enter Your Question From Documents")
 
 # if st.button("Documents Embedding"):
