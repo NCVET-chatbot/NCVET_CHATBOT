@@ -11,7 +11,7 @@ os.environ["GOOGLE_API_KEY"]=os.getenv("GOOGLE_API_KEY")
 
 # Initialize components
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-loader = PyPDFDirectoryLoader("/NCVET_CHATBOT/data")
+loader = PyPDFDirectoryLoader("data")
 docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 final_documents = text_splitter.split_documents(docs)
